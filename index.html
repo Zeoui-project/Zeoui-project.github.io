@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
-  </body>
+<head>
+  <title>Testing UI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Testing UI</h1>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <label for="message">Message:</label>
+  <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+
+  <button onclick="submitForm()">Submit</button>
+
+  <script>
+    function submitForm() {
+      var name = document.getElementById('name').value;
+      var message = document.getElementById('message').value;
+      // You can perform any testing logic or actions with the entered data here
+      console.log('Name:', name);
+      console.log('Message:', message);
+    }
+  </script>
+</body>
 </html>
