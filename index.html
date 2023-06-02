@@ -1,56 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testing UI</title>
+  <title>E-Commerce Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    section {
       padding: 20px;
     }
-    h1 {
+    .product {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
     }
-    label {
-      display: block;
+    .product img {
+      width: 100px;
+      margin-right: 10px;
+    }
+    .product-info {
+      flex-grow: 1;
+    }
+    .product-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .product-price {
+      color: #888;
       margin-bottom: 10px;
     }
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 5px;
+    .product-description {
       margin-bottom: 10px;
     }
-    button {
+    .product-button {
       padding: 10px 20px;
       background-color: #4CAF50;
-      color: white;
+      color: #fff;
       border: none;
       cursor: pointer;
     }
-    button:hover {
+    .product-button:hover {
       background-color: #45a049;
+    }
+    footer {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Testing UI</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <label for="name">Name:</label>
-  <input type="text" id="name" placeholder="Enter your name">
+  <section>
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <div class="product-info">
+        <h2 class="product-title">Product 1</h2>
+        <p class="product-price">$19.99</p>
+        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="product-button">Add to Cart</button>
+      </div>
+    </div>
 
-  <label for="message">Message:</label>
-  <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <div class="product-info">
+        <h2 class="product-title">Product 2</h2>
+        <p class="product-price">$24.99</p>
+        <p class="product-description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="product-button">Add to Cart</button>
+      </div>
+    </div>
 
-  <button onclick="submitForm()">Submit</button>
+    <!-- Add more product entries here -->
+  </section>
 
-  <script>
-    function submitForm() {
-      var name = document.getElementById('name').value;
-      var message = document.getElementById('message').value;
-      // You can perform any testing logic or actions with the entered data here
-      console.log('Name:', name);
-      console.log('Message:', message);
-    }
-  </script>
+  <footer>
+    <p>&copy; 2023 E-Commerce Website. All rights reserved.</p>
+  </footer>
 </body>
 </html>
