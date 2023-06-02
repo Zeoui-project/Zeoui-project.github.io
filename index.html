@@ -68,9 +68,30 @@
       text-align: center;
       color: #888;
     }
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .text {
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+    .image {
+      margin-left: 20px; /* Add left margin to create space */
+      width: 100px; /* Adjust the width as needed */
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="image">
+      <img src="Logo.jpg" alt="Image" width="100%" height="auto">
+    </div>
+    <div class="text">
+      <h1>Usagi Japanese Language Foundation</h1>
+    </div>
+  </div>
+
   <header>
     <nav>
       <ul>
@@ -98,7 +119,7 @@
     <div class="product">
       <img src="product2.jpg" alt="Product 2">
       <div class="product-info">
-        <h2 class="product-title">N4</h2>
+        <h2 class="product-title">N4 Course Level</h2>
         <p class="product-price">$24.99 / Month (8 session (1 hour/session))</p>
         <p class="product-description">Materials covered: Vocabulary, Grammar, Speaking, Exercise, Reading Comprehensive</p>
         <button class="product-button">Register</button>
